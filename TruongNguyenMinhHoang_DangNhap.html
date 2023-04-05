@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nhà sách Tiki</title>
+	<link href="script/style1.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<header>
+ <div id="logo"><img src="Images/R.jfif" width="10%" title="Trang 
+chủ"/></div>
+<p><font size="50%" color="#00BFFF"><center>Nhà sách Tiki</center></font></p>
+ <div id="dn"> 
+ <img src="Images/R.jpg"  width="10%" title="Đăng nhập">
+ <a href="TruongNguyenMinhHoang_DangNhap.html">Đăng nhập</a> | <a 
+href="TruongNguyenMinhHoang_dangki.html">Đăng ký</a>
+ <a href="#"><img src="Images/R.png" width="10%" title="Giỏ hàng" 
+/>Giỏ hàng (<span>Trống</span>)</a>
+ </div> 
+ </header>
+ 
+ <nav>
+ <div id="subnav">
+ <ul>
+ <li><a href="TruongNguyenMinhHoang_TrangChu.html">TRANG CHỦ</a></li>
+ <li><a href="#" target="_blank">GIỚI 
+THIỆU</a></li>
+ <li><a href="#">LIÊN HỆ</a></li>
+ </ul>
+ <div>
+ <input type="text" name="tsearch" placeholder="Hãy nhập 
+tên sách cần tìm ..." id="tsearch">
+ <input type="submit" value="Tìm sách" title="Tìm sách">
+ </div>
+ </div> 
+ </nav>
+</aside>
+ <article>
+ <aside id="left">
+ <div >
+ 	<p>DAN SÁCH CÁC SÁCH</p>
+ <ul type="square">
+ <li><a href="#">English</a></li>
+ <li><a href="#">Technology</a></li>
+ <li><a href="#">Truyện tranh</a></li>
+ <li><a href="#">Tâm lý học</a></li>
+ <li><a href="#">Light Novel</a></li>
+ <li><a href="#">Y học</a></li>
+ <li><a href="#">Lịch sử, địa lý</a></li>
+ <li><a href="#">Kinh tế</a></li>
+ <li><a href="#">Nghệ thuật sống</a></li>
+ </ul>
+ </div>
+ <div>
+ <p>SÁCH THEO NHÀ XUẤT BẢN</p>
+ <ul type="square">
+ <li><a href="#">Nhà xuất bản Trẻ</a></li>
+ <li><a href="#">NXB Thống kê</a></li>
+ <li><a href="#">NXB Kim Đồng</a></li>
+ <li><a href="#">Sky Novel</a></li>
+ <li><a href="#">Tsuki Novel</a></li>
+ <li><a href="#">NXB Giáo Dục</a></li>
+ <li><a href="#">Alpha Books</a></li>
+ </ul>
+ 
+ </div>
+	  <div class="calendar">
+		 <script LANGUAGE="JavaScript">
+			 monthnames = new Array("January","Februrary","March",
+"April","May","June","July","August","September","October",
+"November","Decemeber");
+ var linkcount=0;
+
+function addlink(month, day, href) {
+ var entry = new Array(3);
+ entry[0] = month;
+ entry[1] = day;
+ entry[2] = href;
+ this[linkcount++] = entry;
+ }
+ Array.prototype.addlink = addlink;
+ linkdays = new Array();
+ monthdays = new Array(12);
+ monthdays[0]=31;
+ monthdays[1]=28;
+ monthdays[2]=31;
+ monthdays[3]=30;
+ monthdays[4]=31;
+ monthdays[5]=30;
+ monthdays[6]=31;
+ monthdays[7]=31;
+ monthdays[8]=30;
+ monthdays[9]=31;
+ monthdays[10]=30;
+ monthdays[11]=31;
+ todayDate=new Date();
+ thisday=todayDate.getDay();
+ thismonth=todayDate.getMonth();
+ thisdate=todayDate.getDate();
+ thisyear=todayDate.getYear();
+ thisyear = thisyear % 100;
+ thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 +
+thisyear));
+ if (((thisyear % 4 == 0) && !(thisyear % 100 ==
+0))||(thisyear % 400 == 0)) monthdays[1]++;
+ startspaces=thisdate;
+ while (startspaces > 7) startspaces-=7;
+ startspaces = thisday - startspaces + 1;
+ if (startspaces < 0) startspaces+=7;
+ document.write("<table>");
+document.write("<tr><td colspan=7 class='monthyear'>"+
+monthnames[thismonth] + " " + thisyear+ "</td></tr>");
+ document.write("<tr class='weektitle'>");
+ document.write("<td align=center>Sun</td>");
+ document.write("<td align=center>Mon</td>");
+ document.write("<td align=center>Tus</td>");
+ document.write("<td align=center>Wed</td>");
+ document.write("<td align=center>Thu</td>");
+ document.write("<td align=center>Fri</td>");
+ document.write("<td align=center>Sat</td>");
+ document.write("</tr>");
+ document.write("<tr>");
+ for (s=0;s<startspaces;s++) {
+ document.write("<td> </td>");
+ }
+ count=1;
+ while (count <= monthdays[thismonth]) {
+ for (b = startspaces;b<7;b++) {
+ linktrue=false;
+ document.write("<td class='weekday'>");
+ for (c=0;c<linkdays.length;c++) {
+ if (linkdays[c] != null) {
+ if ((linkdays[c][0]==thismonth + 1) &&
+(linkdays[c][1]==count)) {
+ document.write("<a href=\"" + linkdays[c][2] + "\">");
+ linktrue=true;
+ }
+ }
+ }
+ if (count==thisdate) {
+ document.write("<font color='#FF0000'><strong>");
+ }
+ if (count <= monthdays[thismonth]) {
+ document.write(count);
+ }
+ else {
+ document.write(" ");
+ }
+ if (count==thisdate) {
+ document.write("</strong></font>");
+ }if (linktrue)
+ document.write("</a>");
+ document.write("</td>");
+	 count++;
+ }
+ document.write("</tr>");
+ document.write("<tr>");
+ startspaces=0;
+ }
+ document.write("</table>");
+		 </script>
+
+	 </div>
+ 
+
+ 
+ </aside>
+ 
+ <section>
+	<form action ="#" name ="Đăng nhập" method =" post">
+		<table border="1" cellspacing="0" width="30%">
+			<tr>
+			<td colspan="2"><h1><center>Đăng nhập</center></h1></td>
+			</tr>
+			<tr>
+				<td>Tên đăng nhập:</td>
+				<td ><input type="text" name="TenDN" /></td>
+			</tr>
+			<tr>
+			 <td >Mật khẩu:</td>
+			<td><input type="password" name="MatKhau" required /></td></tr>
+			<tr>
+				<td align="center" colspan="2"><input type ="submit" value="Đăng nhập"></td>
+			</tr>
+			<tr>
+			<td align="right" colspan="2"><a href="Đổi mật khẩu">Đổi mật khẩu</a>
+				</td></tr></table></form>
+ </section>
+ 
+ <aside id="right">
+ <div id="sachbannhieu">
+ <p>SÁCH BÁN NHIỀU</p>
+ <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="stop()" onMouseOut="start()">
+<p><a href="#"><img src="Images/sach/5.jpg">Tâm lý học- Giải mã bản thân</a></p>
+ <p><a href="#"><img src="Images/Sach/7.jpg">Chuyên đề luyện IELTS</a></p>
+ <p><a href="#"><img src="Images/Sach/14.jpg">Fire Force</a></p>
+ <p><a href="#"><img src="Images/Sach/4.jpg">Tô bình yên-vẽ hạnh phúc</a></p>
+ </marquee>
+ </div>
+ <div id="lienketwebsite">
+ <p>LIÊN KẾT WEBSITE</p>
+ <select 
+onchange="window.open(this.options[this.selectedIndex].value,'_blank')"
+> 
+ <option selected="selected">---- Chọn trang liên kết ---
+</option>
+ <option value="http://www.tdmu.edu.vn">ĐH Thủ Dầu 
+Một</option>
+ <option value="http://www.iteee.tdmu.edu.vn">Khoa 
+KT-CN</option>
+ </select>
+ </div>
+ </article>
+ </div>
+ <footer>
+ <p>© 2022 - Bản quyền của Công ty TNHH Ti Ki</p>
+ <p>Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn hàng</p>
+ <p>Email: 2224802010815@student.tdmu.edu.vn</p>
+ <p>Trụ sở chính: Tòa nhà Viettel, Số 285, đường Cách Mạng Tháng 8, phường 12, quận 10, Thành phố Hồ Chí Minh</p>
+ <p>Hotline: 1900-6035(1000 đ/phút, 8-21h kể cả T7, CN)</p>
+ </footer>
+</body>
+</html>

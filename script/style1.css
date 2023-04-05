@@ -1,0 +1,344 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+header
+{
+    width: 1200px;
+    margin: 0px auto;
+}
+div#logo
+{
+float: left;
+}
+div#dn
+{
+float: right;
+margin-top: 30px;
+margin-left: 800px;
+
+}
+div#dn a
+{
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:rgb(12, 11, 11);
+    
+}
+div#dn a:hover
+{
+color:#900 ;
+list-style-type: none;
+}
+
+nav{
+    clear:both;
+    background-color:#7FFFD4;
+    height:45px;
+   }
+   
+nav div#subnav
+{
+    width: 1200px;
+    margin: 0px auto;
+}
+nav ul{
+    float:left;
+    list-style:none;
+    margin-left:50px;
+   }
+   nav ul li{
+    float:left;
+    padding:11px 15px;
+   }
+   
+   nav ul li a{
+    color:#FA8072;
+    font-size:16px;
+    font-family:Arial;
+    text-decoration:none;
+    font-weight:bold;
+   }
+   
+   nav ul li:hover a{
+    border-bottom:5px dashed #98FB98;
+   }
+nav div#subnav>div{
+ float:right;
+ background-color:white;
+ padding-left:10px;
+ margin-top:5px;
+ margin-right:5px;
+ height:34px;
+ width:380px;
+ border:0.5px solid #CED2DD;
+ border-radius:5px;
+}
+
+nav div#subnav>div input[type=text]
+{
+ float:left;
+ height:29px;
+ width:250px;
+ font-size:14px;
+ border:none;
+}
+nav div#subnav>div input[type=submit]
+{
+ float:right;
+ height:100%;
+ width:80px;
+ background:#F7F2E7;
+ border-top-right-radius:7px;
+ border-bottom-right-radius:7px;
+ border-left:0.5px solid #CED2DD;
+ font-size:14px;
+}
+nav div#subnav>div input[type=submit]:hover{
+    cursor:pointer;
+}
+div#body{
+    width:1200px;
+    margin:0px auto;
+    background-color:#edeaea;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px
+   0 rgba(0, 0, 0, 0.19);
+   }
+   article{
+    display:table-row;
+   }
+   aside#left, aside#right, section{
+    display:table-cell;
+    vertical-align:top;
+   }
+   aside#left{
+    width:240px;
+   }
+.monthyear{
+	text-align: center;
+	background-color: #FFA828;
+	border: solid 1px;
+	color: white;
+}
+div.calendar{
+	justify-content: center;
+	display: flex;
+}
+.weekday{
+border: solid 1px black;
+	width: 30px;
+	height: auto;
+	text-align: center;
+}
+.weektitle td{
+	background-color: #ED7DF3;
+	border: solid 1px;
+}
+
+   section{
+    width:750px;
+    padding:0px 8px;
+   }
+   aside#right{
+    width:200px;
+   }
+   aside#left>div{
+    border:1px solid #98FB98;
+    border-radius:4px;
+    margin-bottom:10px;
+   }
+   aside#left>div>p{
+    background-color:#98FB98;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:white;
+    height:25px;
+    padding-top:5px;
+   }
+   aside#left>div>ul{
+    padding-left:10px;
+    font-size:14px;
+    font-family:Arial;
+   }
+   aside#left>div>ul>li{
+    height:25px;
+    list-style-position:inside;
+    list-style-image:url(../Images/icon_list.jpg);
+    padding-left:5px;
+   }
+   aside#left>div>ul>li a {
+    color:#00BFFF;
+    text-decoration:none;
+   }
+   aside#left>div>ul>li a:hover {
+    color:#ff0000;
+   }
+   aside#right>div{
+    border:1px solid #98FB98;
+    border-radius:4px;
+    margin-bottom:30px;
+   }
+   aside#right>div>p{
+    background-color:#98FB98;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:white;
+    height:25px;
+    padding-top:5px;
+    text-decoration: none;
+   }
+   aside#right>div#sachbannhieu p{
+    clear:both;
+   }
+   aside#right>div#sachbannhieu img{
+    width:40px;
+    height:50px;
+    padding-left:5px;
+    float:left;
+    margin-bottom:5px;
+   }
+   aside#right>div#sachbannhieu a{
+    text-decoration:none;
+    font-size:9pt;
+    font-family:Arial;
+    color:#456c26;
+    height:70px;
+   }
+   aside#right>div#sachbannhieu a:hover{
+    font-weight:bold;
+   }
+   aside#right>div#sachbannhieu p{
+    clear:both;
+   }
+   aside#right>div#sachbannhieu img{
+    width:40px;
+    height:50px;
+    padding-left:5px;
+    float:left;
+    margin-bottom:5px;
+   }
+   aside#right>div#sachbannhieu a{
+    text-decoration:none;
+    font-size:9pt;
+    font-family:Arial;
+    color:#456c26;
+    height:70px;
+   }
+   aside#right>div#sachbannhieu a:hover{
+    font-weight:bold;
+   }
+   section>p{
+    background: #98FB98;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:white;
+    height:25px;
+    padding-top:5px;
+   }
+   .sach{
+    width:240px;
+    height:320px;
+    background-color:#ADD8E6;
+    margin:3px;
+    border-radius:5px;
+    border:1px dashed #1E90FF;               
+    text-align:center;
+    float:left;
+    text-decoration: none;
+   }
+   .tensach {
+    margin-top:5px;
+    vertical-align:top;
+    height: 40px;
+    
+   }                            
+   .tensach a{
+    font-weight:bold;
+    color:#133a62;
+    font-size:14px;
+    text-decoration: none;
+   }
+   .tensach a:hover{
+    font-style:italic;
+   }
+   .hinhsach{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px
+   20px 0 rgba(0, 0, 0, 0.19);
+    width:150px;
+    height:200px;
+    transition:all 0.5s ease;
+   
+   }
+   .hinhsach:hover{
+    transform: scale(1.1);
+   }
+   .dongia {
+    margin-top:10px;
+    font-size:15px;
+   }
+   .gia{
+    color:red;
+    font-weight:bold;
+   }
+   .nutchonmua {
+    margin:7px 0px;
+    height:30px;
+   }
+   footer{
+    background-color:#F4A460;
+    height: 150px;
+    padding-top:10px;
+   }
+   footer>p{
+    text-align:center;
+    font-size:17px;
+    margin-top:5px;
+   }
+   #anh{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+#anh #hinhslide{
+	width: 100%;
+	height: 300px;
+}
+#anh #previous{
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	width: 28px;
+	height: 44px;
+	display: none;
+}
+#anh #next{
+	position: absolute;
+	top: 120px;
+	right: 0px;
+	width: 28px;
+	height: 44px;
+	display: none;
+}
+#anh:hover #previous{
+	display: block;
+	opacity: 0.6;
+}
+#anh:hover #next{
+	display: block;
+	opacity: 0.6;
+}
+
+   

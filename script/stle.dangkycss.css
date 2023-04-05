@@ -1,0 +1,50 @@
+div#dky {
+    background-color:#206AB5;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color:#43768C;
+    height:25px;
+    padding-top:5px;
+}
+section {
+    background-color: rgb(156, 216, 224);
+    border-radius: 5px;
+    width:750px;
+    padding:0px 8px;
+    
+}
+div#infor {
+    margin: 10px;
+}
+div#infor b {
+    margin-left: 10px;
+}
+.center {
+    padding: 20px 50px;
+}
+.button {
+    padding-left: 50px;
+}
+div#infor td {
+    padding-bottom: 16px;
+}
+.sub {
+    text-align:center;
+    font-weight:bold;
+    color:white;
+    
+}
+.sub:hover { cursor: pointer;}
+div#infor>fieldset{
+	
+justify-content:center;
+	display: flex;
+}
+div#infor>label{
+	float: left;}
+.Menu{
+	color: #E0E0E0;
+}
